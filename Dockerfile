@@ -14,9 +14,6 @@ RUN apt-get update && apt-get install -y \
 COPY ./requirements.txt /tmp
 WORKDIR /tmp
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt \
-	&& mkdir /tmp/excel_file \
-	&& mkdir /tmp/excel_file/data_schema \
-	&& mkdir /tmp/excel_file/export_files
+RUN pip install -r requirements.txt
 
 WORKDIR /

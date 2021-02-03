@@ -1,9 +1,19 @@
 version: '3.7'
 
 services:
-  kuakua-server:
+  kuakua:
     build: .
     restart: always
-    command: python manange.py runserver 8000
+    command: python /Kuakua/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ../Kuakua:/Kuakua
     ports:
       - 80:8000
+    networks:
+      - default
+
+
+networks:
+  default:
+    external:
+      name: kuakua_network
