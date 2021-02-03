@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  kuakua-server:
+    build: .
+    restart: always
+    command: python manange.py runserver 8000
+    ports:
+      - 80:8000
