@@ -4,7 +4,7 @@ services:
   kuakua:
     build: .
     restart: always
-    command: python /Kuakua/manage.py runserver 0.0.0.0:8000
+    command: uwsgi --http :8000 --module Kuakua.wsgi --master --processes 2 --threads 2
     volumes:
       - ../Kuakua:/Kuakua
     ports:
