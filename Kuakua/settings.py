@@ -25,7 +25,7 @@ SECRET_KEY = 'a#(yw6x#*z@i2+uqrw^4gkf3)u1netv%1!^x^*7)on)kdr19&k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.louis-wu.com", "127.0.0.1:80"]
 
 
 # Application definition
