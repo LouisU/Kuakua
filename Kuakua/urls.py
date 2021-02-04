@@ -21,12 +21,13 @@ from minds.views import ArticleViewSet
 from books.views import BooksViewSet
 
 router = DefaultRouter()
-router.register('api/minds', ArticleViewSet)
-router.register('api/books', BooksViewSet)
+router.register('v1/api/minds', ArticleViewSet)
+router.register('v1/api/books', BooksViewSet)
 
 
 urlpatterns = [
     path(r'', include(router.urls)),
     path('admin/', admin.site.urls),
+
     # path('api/', include('minds.urls'))
 ]
