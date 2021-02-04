@@ -4,7 +4,7 @@ services:
   kuakua:
     build: .
     restart: always
-    command: uwsgi --http :8000 --module Kuakua.wsgi --master --processes 2 --threads 2
+    command: uwsgi --chdir /Kuakua --http :8000 --module Kuakua.wsgi --master --processes 2 --threads 2
     volumes:
       - ../Kuakua:/Kuakua
     ports:
